@@ -1,0 +1,14 @@
+<div class="section">
+  <h2>JavaScript – Data Handling</h2>
+  <p>
+    Asynchronous data loading and separation of logic.
+  </p>
+</div>
+
+<pre>
+async function fetchProjects() {
+  const response = await fetch("/api/projects");
+  const projects = await response.json();
+  return projects.filter(p => p.active);
+}
+</pre>

@@ -1,0 +1,16 @@
+<div class="section">
+  <h2>MySQL – Relational Design</h2>
+  <p>
+    Normalised schema with junction tables and constraints.
+  </p>
+</div>
+
+<pre>
+CREATE TABLE submissions (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  student_id INT NOT NULL,
+  assignment_id INT NOT NULL,
+  submitted_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  UNIQUE(student_id, assignment_id)
+);
+</pre>
