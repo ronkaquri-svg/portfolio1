@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Trip Booking</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="dashboard-container">
+
+  <!-- LEFT SIDEBAR -->
+  <div class="sidebar">
+    <h2>TripBooking</h2>
+    <p id="sidebar-name" style="font-weight:bold; margin-bottom:20px;">Hello, Guest</p>
+    <a href="#" onclick="showDashboard()">Dashboard</a>
+    <a href="#" onclick="showTrips()">Trips</a>
+    <a href="#" onclick="showProfile()">Profile</a>
+    <a href="#" onclick="logout()">Logout</a>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <div class="dashboard-content" id="main-content">
+    <!-- Initial content (trips) -->
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+<script src="auth.js"></script>
+<script>
+  // On page load
+  window.addEventListener("load", () => {
+    updateSidebarName();
+    showTrips(); // show trips initially
+  });
+</script>
+</body>
+</html>
